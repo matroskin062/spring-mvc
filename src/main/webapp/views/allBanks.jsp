@@ -14,14 +14,15 @@
 <body>
     <div class="container">
         <c:forEach var="bank" items="${banks}">
-            <table border="1">
+            <table class="table table-hover" width="50%" style="margin-top: 10px">
                 <thead>
-                    <th>Id</th>
-                    <th>Name</th>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col" width="55%"></th>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>${bank.id}</td>
+                        <td scope="row">${bank.id}</td>
                         <td>${bank.name}</td>
                         <td>
                             <a class="btn btn-danger" href="bank/delete/${bank.id}">DELETE</a>
