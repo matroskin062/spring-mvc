@@ -12,21 +12,24 @@
 
 </head>
 <body>
-<form action="/bank" method="get">
-    <c:forEach var="bank" items="${banks}">
-        <table>
-            <thead>
-                <th>Id</th>
-                <th>Name</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>${bank.id}</td>
-                    <td>${bank.name}</td>
-                </tr>
-            </tbody>
-        </table>
-    </c:forEach>
-</form>
+    <div class="container">
+        <c:forEach var="bank" items="${banks}">
+            <table border="1">
+                <thead>
+                    <th>Id</th>
+                    <th>Name</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>${bank.id}</td>
+                        <td>${bank.name}</td>
+                        <td>
+                            <a class="btn btn-danger" href="bank/delete/${bank.id}">DELETE</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </c:forEach>
+    </div>
 </body>
 </html>
