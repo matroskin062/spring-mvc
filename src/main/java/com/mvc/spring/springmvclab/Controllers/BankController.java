@@ -1,12 +1,10 @@
 package com.mvc.spring.springmvclab.Controllers;
 
+import com.mvc.spring.springmvclab.Entities.Bank;
 import com.mvc.spring.springmvclab.Repositories.BankRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.jws.WebParam;
@@ -23,6 +21,12 @@ public class BankController {
         model.setViewName("allBanks");
         model.addObject("banks", bankRepo.findAll());
         return model;
+    }
+
+    @RequestMapping(method = RequestMethod.POST, value = "/add")
+    public ModelAndView add(@ModelAttribute Bank bank){
+        bankRepo.save(bank);
+        return new ModelAndView("redirect:/bank");
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/delete/{id}")
