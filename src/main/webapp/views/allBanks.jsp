@@ -31,6 +31,8 @@
                 </tbody>
             </table>
         </c:forEach>
+        <a class="btn" href="main.html">To main menu</a>
     </div>
+
 </body>
 </html>
