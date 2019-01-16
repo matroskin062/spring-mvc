@@ -1,5 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!doctype html>
 <html lang="en">
 <head>
@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="container">
-        <c:forEach var="bank" items="${banks}">
+        <form method="get" action="/bank">
             <table class="table table-hover" width="50%" style="margin-top: 10px">
                 <thead>
                     <th scope="col">Id</th>
@@ -21,17 +21,30 @@
                     <th scope="col" width="55%"></th>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td scope="row">${bank.id}</td>
-                        <td>${bank.name}</td>
-                        <td>
-                            <a class="btn btn-danger" href="bank/delete/${bank.id}">DELETE</a>
-                        </td>
-                    </tr>
+                    <c:forEach var="bank" items="${banks}">
+                        <tr>
+                            <td scope="row">${bank.id}</td>
+                            <td>${bank.name}</td>
+                            <td>
+                                <a class="btn btn-danger" href="bank/delete/${bank.id}">DELETE</a>
+                            </td>
+                        </tr>
+                    </c:forEach>
                 </tbody>
             </table>
-        </c:forEach>
+
+        </form>
+        <form action="/bank/create" method="post">
+            <div class="form-group">
+                <label for="name">Enter Bank Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter Name">
+            </div>
+            <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+
+
         <a class="btn" href="main.html">To main menu</a>
+        
     </div>
 
 </body>
