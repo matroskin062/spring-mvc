@@ -34,10 +34,10 @@
             </table>
 
         </form>
-        <form action="/bank/create" method="post">
+        <form action="/bank/create" method="post" >
             <div class="form-group">
                 <label for="name">Enter Bank Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter Name">
+                <input name="name" type="text" class="form-control" id="name" placeholder="Enter Name">
             </div>
             <button type="submit" class="btn btn-primary">Add</button>
         </form>
