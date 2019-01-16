@@ -7,8 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.jws.WebParam;
-import javax.validation.constraints.Min;
+
 
 @Controller
 @RequestMapping("/bank")
@@ -28,8 +27,15 @@ public class BankController {
         return model;
     }
 
-    @RequestMapping( value = "/create", method = RequestMethod.POST)
-    public ModelAndView add(@ModelAttribute Bank bank){
+    @RequestMapping(method = RequestMethod.GET, value = "/{id}")
+    public ModelAndView getById(ModelAndView modelAndView, @PathVariable Long id){
+        modelAndView.setViewName("bankInfo");
+        modelAndView.addObject("bank", bankRepo.findById(id).get());
+        return modelAndView;
+    }
+
+    @RequestMapping(method = RequestMethod.POST, value = "/create")
+    public ModelAndView create(@ModelAttribute Bank bank){
         bankRepo.save(bank);
         return new ModelAndView("redirect:/bank");
     }
