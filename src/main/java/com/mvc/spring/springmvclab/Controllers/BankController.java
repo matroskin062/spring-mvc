@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.jws.WebParam;
+import javax.validation.constraints.Min;
 
 @Controller
 @RequestMapping("/bank")
@@ -16,6 +17,10 @@ public class BankController {
     @Autowired
     private BankRepo bankRepo;
 
+    public BankController(BankRepo bankRepo){
+        this.bankRepo = bankRepo;
+    }
+
     @RequestMapping(method = RequestMethod.GET)
     public ModelAndView getAll(ModelAndView model){
         model.setViewName("allBanks");
@@ -23,7 +28,7 @@ public class BankController {
         return model;
     }
 
-    @RequestMapping(method = RequestMethod.POST, value = "/add")
+    @RequestMapping( value = "/create", method = RequestMethod.POST)
     public ModelAndView add(@ModelAttribute Bank bank){
         bankRepo.save(bank);
         return new ModelAndView("redirect:/bank");
