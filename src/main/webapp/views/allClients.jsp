@@ -57,7 +57,7 @@
     </form>
 
 
-    <a class="btn" href="main.html">To main menu</a>
+    <a class="btn" href="main">To main menu</a>
 
 </div>
 
