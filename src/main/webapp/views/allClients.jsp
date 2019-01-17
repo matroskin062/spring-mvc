@@ -57,7 +57,7 @@
         <button type="submit" class="btn btn-primary">Add</button>
     </form>
 
-    <a class="btn btn-outline-secondary my-2" href="index">To main menu</a>
+    <a class="btn btn-outline-secondary my-2" href="/">To main menu</a>
 
 </div>
 

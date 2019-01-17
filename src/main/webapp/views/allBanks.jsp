@@ -44,7 +44,7 @@
         </form>
 
 
-        <a class="btn btn-outline-secondary my-2" href="index">To main menu</a>
+        <a class="btn btn-outline-secondary my-2" href="/">To main menu</a>
         
     </div>
 
