@@ -43,7 +43,7 @@
         </form>
 
 
-        <a class="btn" href="main">To main menu</a>
+        <a class="btn btn-outline-secondary my-2" href="main">To main menu</a>
         
     </div>
 
