@@ -11,8 +11,8 @@
 <body>
     <div class="container text-center">
         <h1>Main page</h1>
-        <a class="btn" href="/bank">Banks</a>
-        <a class="btn" href="/client">Client</a>
+        <a class="btn btn-outline-primary" href="/bank">Banks</a>
+        <a class="btn btn-outline-primary" href="/client">Client</a>
     </div>
 </body>
 </html>
