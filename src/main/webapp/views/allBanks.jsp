@@ -27,6 +27,7 @@
                             <td>${bank.name}</td>
                             <td>
                                 <a class="btn btn-danger" href="bank/delete/${bank.id}">DELETE</a>
+                                <a class="btn btn-info" href="bank/${bank.id}">Info</a>
                             </td>
                         </tr>
                     </c:forEach>

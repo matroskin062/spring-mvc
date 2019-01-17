@@ -7,7 +7,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UACompatible" content="ie=edge">
-    <title>Bank List</title>
+    <title>Client List</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 </head>
@@ -35,6 +35,7 @@
                 <td>${client.bank}</td>
                 <td>
                     <a class="btn btn-danger" href="client/delete/${client.id}">DELETE</a>
+                    <a class="btn btn-info" href="client/${client.id}">Info</a>
                 </td>
             </tr>
             </c:forEach>

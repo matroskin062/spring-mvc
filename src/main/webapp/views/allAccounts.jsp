@@ -27,7 +27,8 @@
                     <td scope="row">${account.id}</td>
                     <td>${account.amount}</td>
                     <td>
-                        <a class="btn btn-danger" href="bank/delete/${account.id}">DELETE</a>
+                        <a class="btn btn-danger" href="account/delete/${account.id}">DELETE</a>
+                        <a class="btn btn-info" href="account/${account.id}">Info</a>
                     </td>
                 </tr>
             </c:forEach>
