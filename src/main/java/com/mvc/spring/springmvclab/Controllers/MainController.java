@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/main")
+@RequestMapping({"/","/main"})
 public class MainController {
     @RequestMapping(method = RequestMethod.GET)
     public String toMain(){
-        return "main";
+        return "index";
     }
 }

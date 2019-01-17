@@ -27,6 +27,7 @@
                             <td>${bank.name}</td>
                             <td>
                                 <a class="btn btn-danger" href="bank/delete/${bank.id}">DELETE</a>
+                                <a class="btn btn-info" href="bank/${bank.id}">Info</a>
                             </td>
                         </tr>
                     </c:forEach>
@@ -43,7 +44,7 @@
         </form>
 
 
-        <a class="btn btn-outline-secondary my-2" href="main">To main menu</a>
+        <a class="btn btn-outline-secondary my-2" href="/">To main menu</a>
         
     </div>
 

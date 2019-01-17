@@ -47,4 +47,11 @@ public class ClientController {
         clientRepo.deleteById(id);
         return new ModelAndView("redirect:/client");
     }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/{id}")
+    public ModelAndView getById(ModelAndView modelAndView, @PathVariable Long id){
+        modelAndView.setViewName("clientInfo");
+        modelAndView.addObject("client", clientRepo.findById(id).get());
+        return modelAndView;
+    }
 }
