@@ -9,9 +9,7 @@ public class BankAccount {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    private double currency;
     private double amount;
-    private double amountOfCredit;
 
     @ManyToOne
     @JoinColumn(name = "client_id")
@@ -20,10 +18,8 @@ public class BankAccount {
     public BankAccount() {
     }
 
-    public BankAccount(double currency, double amount, double amountOfCredit, Client client) {
-        this.currency = currency;
-        this.amount = amount;
-        this.amountOfCredit = amountOfCredit;
+    public BankAccount(double amount, Client client) {
+       this.amount = amount;
         this.client = client;
     }
 
@@ -35,28 +31,12 @@ public class BankAccount {
         this.id = id;
     }
 
-    public double getCurrency() {
-        return currency;
-    }
-
-    public void setCurrency(double currency) {
-        this.currency = currency;
-    }
-
     public double getAmount() {
         return amount;
     }
 
     public void setAmount(double amount) {
         this.amount = amount;
-    }
-
-    public double getAmountOfCredit() {
-        return amountOfCredit;
-    }
-
-    public void setAmountOfCredit(double amountOfCredit) {
-        this.amountOfCredit = amountOfCredit;
     }
 
     public Client getClient() {
