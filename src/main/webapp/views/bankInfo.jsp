@@ -11,23 +11,12 @@
     <title>${bank.name}</title>
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-1">
-                <p class="h3">Id</p>
-            </div>
-            <div >
-                <p class="h3">Name</p>
-            </div>
+    <div class="container text-center">
+        <div>
+            <p>Id : ${bank.id}</p>
+            <p>Name : ${bank.name}</p>
         </div>
-        <div class="row">
-            <div class="col-md-1">
-                <p class="h3">${bank.id}</p>
-            </div>
-            <div>
-                <p class="h3">${bank.name}</p>
-            </div>
-        </div>
+        <a class="btn btn-primary" href="/bank">Banks</a>
     </div>
 </body>
 </html>
