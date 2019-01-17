@@ -17,10 +17,12 @@
         <table class="table table-hover" width="50%" style="margin-top: 10px">
             <thead>
                 <th scope="col">Id</th>
+                <th scope="col">Name</th>
                 <th scope="col">Phone Number</th>
                 <th scope="col">E-mail</th>
                 <th scope="col">Address</th>
-                <th scope="col" width="55%"></th>
+                <th scope="col">Bank</th>
+                <th scope="col" width="35%"></th>
             </thead>
             <tbody>
             <c:forEach var="client" items="${clients}">
@@ -30,6 +32,7 @@
                 <td>${client.phoneNumber}</td>
                 <td>${client.email}</td>
                 <td>${client.address}</td>
+                <td>${client.bank}</td>
                 <td>
                     <a class="btn btn-danger" href="bank/delete/${bank.id}">DELETE</a>
                 </td>
@@ -41,8 +44,14 @@
     </form>
     <form action="/client/create" method="post" >
         <div class="form-group">
-            <label for="name">Enter Bank Name</label>
+            <label for="name">Enter Client Name</label>
             <input name="name" type="text" class="form-control" id="name" placeholder="Enter Name">
+            <label for="name">Enter Phone Number</label>
+            <input name="phoneNumber" type="text" class="form-control" id="phoneNumber" placeholder="Enter Phone Number">
+            <label for="name">Enter Client E-mail</label>
+            <input name="email" type="text" class="form-control" id="email" placeholder="Enter E-mail">
+            <label for="name">Enter Address</label>
+            <input name="address" type="text" class="form-control" id="address" placeholder="Enter Address">
         </div>
         <button type="submit" class="btn btn-primary">Add</button>
     </form>
