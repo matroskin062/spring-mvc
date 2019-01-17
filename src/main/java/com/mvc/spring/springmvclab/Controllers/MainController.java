@@ -10,6 +10,6 @@ import org.springframework.web.servlet.ModelAndView;
 public class MainController {
     @RequestMapping(method = RequestMethod.GET)
     public String toMain(){
-        return "main";
+        return "index";
     }
 }
