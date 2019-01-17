@@ -34,7 +34,7 @@
                 <td>${client.address}</td>
                 <td>${client.bank}</td>
                 <td>
-                    <a class="btn btn-danger" href="bank/delete/${bank.id}">DELETE</a>
+                    <a class="btn btn-danger" href="client/delete/${client.id}">DELETE</a>
                 </td>
             </tr>
             </c:forEach>
