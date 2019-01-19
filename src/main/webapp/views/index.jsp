@@ -11,8 +11,13 @@
 <body>
     <div class="container text-center">
         <h1>Main page</h1>
-        <a class="btn btn-outline-primary" href="/bank">Banks</a>
-        <a class="btn btn-outline-primary" href="/client">Client</a>
+        <div>
+            <a class="btn btn-outline-primary" href="/bank">Banks</a>
+            <a class="btn btn-outline-primary" href="/client">Client</a>
+        </div>
+        <div class="mt-2">
+            <a class="btn btn-outline-black" href="/logout">Logout</a>
+        </div>
     </div>
 </body>
 </html>
