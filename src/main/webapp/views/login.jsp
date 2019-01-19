@@ -28,8 +28,6 @@
                     </c:when>
                 </c:choose>
 
-
-
                 <div class="form-group">
                     <input class="form-control" type="text" name="username" id="username"
                            placeholder="Username" required pattern="[a-zA-Z0-9]*$"/>
