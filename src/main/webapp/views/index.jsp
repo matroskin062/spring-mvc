@@ -16,7 +16,7 @@
             <a class="btn btn-outline-primary" href="/client">Client</a>
         </div>
         <div class="mt-2">
-            <a class="btn btn-outline-black" href="/logout">Logout</a>
+            <a class="btn btn-outline-dark btn-sm" href="/logout">Logout</a>
         </div>
     </div>
 </body>
