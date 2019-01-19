@@ -38,7 +38,7 @@
         <form action="/bank/create" method="post" >
             <div class="form-group">
                 <label for="name">Enter Bank Name</label>
-                <input name="name" type="text" class="form-control" id="name" placeholder="Enter Name">
+                <input name="name" type="text" class="form-control" id="name" placeholder="Enter Name" required pattern="[a-zA-Z ]*$">
             </div>
             <button type="submit" class="btn btn-primary">Add</button>
         </form>

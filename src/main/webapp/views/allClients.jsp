@@ -46,11 +46,13 @@
     <form action="/client/create" method="post" >
         <div class="form-group">
             <label for="name">Enter Client Name</label>
-            <input name="name" type="text" class="form-control" id="name" placeholder="Enter Name">
+            <input name="name" type="text" class="form-control" id="name" placeholder="Enter Name" required pattern="^[a-zA-Z ]*$">
             <label for="name">Enter Phone Number</label>
-            <input name="phoneNumber" type="text" class="form-control" id="phoneNumber" placeholder="Enter Phone Number">
+            <input name="phoneNumber" type="text" class="form-control" id="phoneNumber"
+                   placeholder="Enter Phone Number" required pattern="^[+]{1}[0-9]{12}*$">
             <label for="name">Enter Client E-mail</label>
-            <input name="email" type="text" class="form-control" id="email" placeholder="Enter E-mail">
+            <input name="email" type="email" class="form-control" id="email"
+                   placeholder="Enter E-mail" >
             <label for="name">Enter Address</label>
             <input name="address" type="text" class="form-control" id="address" placeholder="Enter Address">
         </div>
