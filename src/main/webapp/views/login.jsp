@@ -18,25 +18,26 @@
 <div class="container text-center">
     <h1>Please Log In</h1>
     <form action="/login" method="post"
-        ${error != null ? 'error' : ''}
+    ${error != null ? 'error' : ''}
     >
-                <c:choose>
-                    <c:when test="${error != null}">
-                        <div class="alert alert-danger" role="alert">
-                            <strong>Error!</strong><div>${error}</div>
-                        </div>
-                    </c:when>
-                </c:choose>
+        <c:choose>
+            <c:when test="${error != null}">
+                <div class="alert alert-danger" role="alert">
+                    <strong>Error!</strong><div>${error}</div>
+                </div>
+            </c:when>
+        </c:choose>
 
-                <div class="form-group">
-                    <input class="form-control" type="text" name="username" id="username"
-                           placeholder="Username" required pattern="[a-zA-Z0-9]*$"/>
-                </div>
-                <div class="form-group">
-                        <input class="form-control" type="password" name="password" id="password"
-                               placeholder="Password"required pattern="^[a-zA-Z0-9]*$"/>
-                </div>
-                <button type="submit" class="btn btn-primary">Log In</button>
+        <div class="form-group">
+            <input class="form-control" type="text" name="username" id="username"
+                   placeholder="Username" required pattern="[a-zA-Z0-9]*$"/>
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="password" name="password" id="password"
+                   placeholder="Password"required pattern="^[a-zA-Z0-9]*$"/>
+        </div>
+        <button type="submit" class="btn btn-primary">Log In</button>
+        <a class="btn btn-outline-primary" href="/registration">Registration</a>
     </form>
 </div>
 </body>
