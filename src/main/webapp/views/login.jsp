@@ -18,12 +18,12 @@
     <h1>Please Log <In></In></h1>
     <form action="/login" method="post">
         <div class="form-group">
-            <input class="form-control" type="text" name="username" id="username" placeholder="Username"/>
+            <input class="form-control" type="text" name="username" id="username"
+                   placeholder="Username" required pattern="[a-zA-Z0-9]*$"/>
         </div>
         <div class="form-group">
-            <%--<label for="password"> Password:--%>
-                <input class="form-control" type="password" name="password" id="password" placeholder="Password"/>
-            <%--</label>--%>
+                <input class="form-control" type="password" name="password" id="password"
+                       placeholder="Password"required pattern="^[a-zA-Z0-9]*$"/>
         </div>
         <button type="submit" class="btn btn-primary">Log In</button>
     </form>
