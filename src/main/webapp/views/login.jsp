@@ -22,8 +22,8 @@
     >
                 <c:choose>
                     <c:when test="${error != null}">
-                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                            <strong>${error}</strong>
+                        <div class="alert alert-danger" role="alert">
+                            <strong>Error!</strong><div>${error}</div>
                         </div>
                     </c:when>
                 </c:choose>
