@@ -23,9 +23,9 @@
         <c:choose>
             <c:when test="${error != null}">
                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    <button type="button btn-primary" class="close" data-dismiss="alert" aria-label="Close">
+                    <a class="close" data-dismiss="alert" aria-label="Close">
                         <p>&times;</p>
-                    </button>
+                    </a>
                     <strong>Error!</strong>
                     <p>${error}</p>
                 </div>
